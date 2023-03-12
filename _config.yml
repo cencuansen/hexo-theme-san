@@ -1,0 +1,17 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  主页: /
+  分类: /categories
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/hexo-theme-san.css
+- /css/layout.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/hexo-theme-san.js

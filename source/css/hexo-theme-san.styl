@@ -1,0 +1,98 @@
+@import "_highlight/tomorrow-night.styl"
+
+$color = #a9a9b3
+$backColor = #292a2d
+
+body
+  margin 0
+  padding 0 30%
+  height 100vh
+  display flex
+  flex-direction column
+  color #a9a9b3
+  position relative
+  background-color #292a2d
+
+a
+  color #a9a9b3
+  text-decoration none
+  background-color #292a2d
+a:hover
+  color #ffffff
+
+::-webkit-scrollbar
+  display none
+
+h1
+  font-size 32px
+  margin 14px 0
+h2
+  font-size 24px
+  margin 12px 0
+h3
+  font-size 20px
+  margin 10px 0
+h4
+  font-size 16px
+  margin 10px 0
+h5
+  font-size 14px
+  margin 10px 0
+h6
+  font-size 12px
+  margin 10px 0
+
+#menu-outer
+    font-size 1.2rem
+    height 80px
+    display flex
+    flex-shrink 0
+    align-items center
+#content-outer
+    flex-grow 1
+#bottom-outer
+    height 80px
+    display flex
+    flex-shrink 0
+    align-items center
+
+.category-list
+  list-style-type none
+  .category-list-item
+    padding .5rem 0
+
+.archive-item
+  padding .5rem 0
+
+#post
+  li,p
+    line-height 1.9rem
+  .line
+    line-height 1.5rem
+  code
+    margin 0 5px
+    padding 2px 4px
+    border-radius 5px
+    background-color #000
+  figure
+    margin 0 0 12px
+    overflow-x scroll
+    border-radius 3px
+    .gutter
+      width 1.5rem
+      user-select none
+    pre
+      margin 0
+  & > table
+    margin 0 0 12px
+    border-collapse: collapse;
+    width: 100%;
+    td, th 
+      border: 1px solid $color;
+      padding: 8px;
+      text-align: left;
+    th 
+      background-color: $backColor;
+  
+
+      

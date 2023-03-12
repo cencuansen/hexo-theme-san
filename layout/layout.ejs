@@ -1,0 +1,48 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+%>
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <meta charset="UTF-8">
+  <title><%=pageTitle%></title>
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <% theme.stylesheets.forEach(url => { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+</head>
+<body>
+
+<div id="menu-outer">
+  <div id="menu-inner">
+    <% Object.keys(theme.menu).forEach(key => { %>
+      <a href="<%=theme.menu[key]%>"><%=key%></a>
+    <% }); %>
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    <%- body %>
+  </div>
+</div>
+
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a href="http://github.com/cencuansen"><%=config.author%></a>
+    &
+    <a href="http://hexo.io">hexo</a>.
+  </div>
+</div>
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+  <% theme.scripts.forEach(url => { %>
+    <script src="<%=url%>"></script>
+  <% }); %>
+<% } %>
+
+</body>
+</html>
